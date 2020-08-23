@@ -93,6 +93,9 @@
             type: 'GET',
             url: url,
             crossDomain: true,
+            headers: {
+                'Access-Control-Allow-Origin': '*'
+            },
             // data: '{"some":"json"}',
             dataType: 'json',
             success: function(responseData, textStatus, jqXHR) {
