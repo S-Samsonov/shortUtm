@@ -86,18 +86,9 @@
 
         link += (link.indexOf('?') !== -1) ? getParam : '?' + getParam.slice(1);
 
-        let url = `https://api.vk.com/method/utils.getShortLink?url=${encodeURI(link)}&access_token=204d6377204d6377204d637713203efbbf2204d204d63777f0fe3ec2af2ca363289a1e3&v=5.21`;
+        let url = `https://api.vk.com/method/utils.getShortLink?url=${encodeURIComponent(link)}&access_token=204d6377204d6377204d637713203efbbf2204d204d63777f0fe3ec2af2ca363289a1e3&v=5.21`;
 
-        // let response = await fetch(url);
-
-        // if (response.ok) { // если HTTP-статус в диапазоне 200-299
-        // // получаем тело ответа (см. про этот метод ниже)
-        // let json = await response.json();
-        // console.log(json);
-        // } else {
-        // alert("Ошибка HTTP: " + response.status);
-        // }
-
+      
         fetch(url)
             .then((response) => {
                 return response.json();
@@ -105,12 +96,6 @@
             .then((data) => {
                 console.log(data);
             });
-
-        // fetch(url)
-        //     .then(response => response.json())
-        //     .then(commits => console.log(commits));
-        
-        // console.log(link)
     });
     
 </script>
