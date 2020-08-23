@@ -87,14 +87,16 @@
         link += (link.indexOf('?') !== -1) ? getParam : '?' + getParam.slice(1);
 
         let url = `https://api.vk.com/method/utils.getShortLink?url=${encodeURIComponent(link)}&access_token=204d6377204d6377204d637713203efbbf2204d204d63777f0fe3ec2af2ca363289a1e3&v=5.21`;
-
         
         $.ajax({
             type: 'GET',
             url: url,
             crossDomain: true,
             headers: {
-                'Access-Control-Allow-Origin': '*'
+                'Content-Type', 'application/json',
+                'Accept', 'application/json',
+                'Access-Control-Allow-Origin', 'https://short-utm.herokuapp.com/',
+                'Access-Control-Allow-Credentials', 'true'
             },
             // data: '{"some":"json"}',
             dataType: 'json',
