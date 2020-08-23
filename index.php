@@ -86,7 +86,7 @@
 
         link += (link.indexOf('?') !== -1) ? getParam : '?' + getParam.slice(1);
 
-        let url = `https://api.vk.com/method/utils.getShortLink?url=${link}&access_token=204d6377204d6377204d637713203efbbf2204d204d63777f0fe3ec2af2ca363289a1e3&v=5.21`;
+        let url = `https://api.vk.com/method/utils.getShortLink?url=${encodeURI(link)}&access_token=204d6377204d6377204d637713203efbbf2204d204d63777f0fe3ec2af2ca363289a1e3&v=5.21`;
 
         // let response = await fetch(url);
 
