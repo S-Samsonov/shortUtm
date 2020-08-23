@@ -21,7 +21,7 @@
 
     <div class="input-group mb-3">
         <div class="input-group-prepend"><span class="input-group-text">Ссылка</span></div>
-        <input type="text" class="form-control" placeholder="Ссылка" name="link">
+        <input type="text" class="form-control" placeholder="Ссылка" name="link" value="http://google.ru/"> 
     </div>
 
     <div class="input-group mb-3">
@@ -36,27 +36,27 @@
 
     <div class="input-group input-group-sm mb-3 form-group">
         <div class="input-group-prepend"><span class="input-group-text">UTM_SOURCE</span></div>
-        <input type="text" class="form-control" placeholder="UTM_SOURCE" name="utm_source">
+        <input type="text" class="form-control" placeholder="UTM_SOURCE" name="utm_source" value="1">
     </div>
 
     <div class="input-group input-group-sm mb-3 form-group">
         <div class="input-group-prepend"><span class="input-group-text">UTM_MEDIUM</span></div>
-        <input type="text" class="form-control" placeholder="UTM_MEDIUM" name="utm_medium">
+        <input type="text" class="form-control" placeholder="UTM_MEDIUM" name="utm_medium" value="2">
     </div>
 
     <div class="input-group input-group-sm mb-3 form-group">
         <div class="input-group-prepend"><span class="input-group-text">UTM_CAMPAIGN</span></div>
-        <input type="text" class="form-control" placeholder="UTM_CAMPAIGN" name="utm_campaign">
+        <input type="text" class="form-control" placeholder="UTM_CAMPAIGN" name="utm_campaign" value="3">
     </div>
 
     <div class="input-group input-group-sm mb-3 form-group">
         <div class="input-group-prepend"><span class="input-group-text">UTM_CONTENT</span></div>
-        <input type="text" class="form-control" placeholder="UTM_CONTENT" name="utm_content">
+        <input type="text" class="form-control" placeholder="UTM_CONTENT" name="utm_content" value="4">
     </div>
 
     <div class="input-group input-group-sm mb-3 form-group">
         <div class="input-group-prepend"><span class="input-group-text">UTM_TERM</span></div>
-        <input type="text" class="form-control" placeholder="UTM_TERM" name="utm_term">
+        <input type="text" class="form-control" placeholder="UTM_TERM" name="utm_term" value="5">
     </div>
 
 </div>
@@ -93,12 +93,11 @@
             url: url,
             crossDomain: true,
             headers: {
-                'Content-Type', 'application/json',
-                'Accept', 'application/json',
-                'Access-Control-Allow-Origin', 'https://short-utm.herokuapp.com/',
-                'Access-Control-Allow-Credentials', 'true'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Access-Control-Allow-Origin': 'https://short-utm.herokuapp.com/',
+                'Access-Control-Allow-Credentials': 'true'
             },
-            // data: '{"some":"json"}',
             dataType: 'json',
             success: function(responseData, textStatus, jqXHR) {
                 console.log(responseData, textStatus, jqXHR);
